@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 80px;
+}
+
+.slider {
+  background-color: #f4eae0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -10;
+}
+
+.dark .slider {
+  background-color: #171717;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.maintext h1 {
+  font-size: 120px;
+  z-index: 1000;
+}
+
+.dark .maintext h1 {
+  color: white;
+}
+
+.maintext a {
+  font-size: 20px;
+  color: #ef5757;
+  margin-left: 10px;
+  margin-top: 40px;
+  position: relative;
+}
+.maintext a:hover::before {
+  content: "";
+  top: 13px;
+  height: 2px;
+  width: 80px;
+  background-color: black;
+  position: absolute;
+}
+
+.dark .maintext a {
+  color: yellow;
+  position: relative;
+}
+.dark .maintext a:hover::before {
+  content: "";
+  top: 10px;
+  height: 2px;
+  width: 80px;
+  background-color: white;
+  position: absolute;
+}
+
+.maintext {
+  margin-top: 100px;
+}
+
+.tranperttext h1 {
+  overflow: hidden;
+  font-size: 140px;
+  color: #e4d9cf;
+  opacity: 0.8;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  letter-spacing: 3px;
+  margin-bottom: -10px;
+}
+
+.dark .tranperttext h1 {
+  color: #6b6b6b;
+  opacity: 0.1;
+}
+
+.back-font {
+  position: absolute;
+  z-index: -1;
+  top: 100px;
+  right: 20px;
+  overflow: hidden;
+}
+
+.btn a {
+  padding: 50px 30px;
+  text-decoration: none;
+  border-radius: 100%;
+  border: 2px solid #ef5757;
+  color: #ef5757;
+  position: relative;
+}
+
+.dark .btn a {
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.btn {
+  margin-top: 60vh;
+  margin-right: 80px;
+  overflow: visible;
+}
+
+.menu a {
+  color: black;
+}
+
+.dark .menu a {
+  color: white;
+}
+
+.dark .logo span {
+  color: white;
+}
+
+.switchtodark span {
+  color: black;
+}
+
+.dark .switchtodark span {
+  color: white;
+}
+
+.switchtodark {
+  margin-top: 60px;
+  margin-left: 30px;
+}
+
+.switchtodark span a {
+  color: black;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.switchtodark span a:hover {
+  color: #ef5757;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.dark .switchtodark span a {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+
+.dark .switchtodark span a:hover {
+  color: yellow;
+}
+
+#about {
+  display: none;
+}
+
+.about-me {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  z-index: 6;
+  justify-content: space-around;
+  transition: 0.5s;
+}
+
+.about-me .textabout h1 {
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+
+.dark .about-me .textabout h1 {
+  color: white;
+}
+
+.about-me .textabout a {
+  margin-left: 50px;
+  color: #ef5757;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+}
+
+.about-me .textabout a:hover::before {
+  content: "";
+  top: 10px;
+  height: 2px;
+  width: 30px;
+  background-color: black;
+  position: absolute;
+}
+.about-me .textabout a:nth-child(3):hover::before {
+  content: "";
+  top: 10px;
+  height: 2px;
+  width: 80px;
+  background-color: black;
+  position: absolute;
+}
+
+.dark .about-me .textabout a {
+  color: yellow;
+  position: relative;
+}
+.dark .about-me .textabout a:hover::before {
+  content: "";
+  top: 10px;
+  height: 2px;
+  width: 30px;
+  background-color: white;
+  position: absolute;
+}
+
+.dark .about-me .textabout a:nth-child(3):hover::before {
+  content: "";
+  top: 10px;
+  height: 2px;
+  width: 80px;
+  background-color: white;
+  position: absolute;
+}
+
+.animate .about-me .textabout {
+  animation-name: go;
+  animation-duration: 2s;
+}
+
+.animate .img-about img {
+  width: 400px;
+  height: 400px;
+  animation-name: img;
+  animation-duration: 0.9s;
+  border-radius: 5px;
+}
+
+@keyframes go {
+  0% {
+    transform: translateY(200%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes img {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me {
+    display: flex;
+    flex-direction: column-reverse;
+    transition: 0.5s;
+    padding: 0px;
+    align-items: center;
+  }
+
+  .about-me .textabout h1 {
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    margin-bottom: 5px;
+  }
+
+  .animate .img-about img {
+    width: 250px;
+    height: 250px;
+    animation-name: img;
+    animation-duration: 5s;
+  }
+
+  .about-me .textabout a {
+    margin-left: 30px;
+  }
+
+  header .nav {
+    padding: 20px 40px;
+  }
+
+  .slider {
+    height: 200vh;
+  }
+  .banner {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .maintext h1 {
+    font-size: 80px;
+  }
+
+  .maintext a {
+    font-size: 20px;
+  }
+
+  .tranperttext h1 {
+    overflow: hidden;
+    font-size: 80px;
+    color: #e4d9cf;
+    opacity: 0.8;
+  }
+  .btn a {
+    padding: 10px 10px;
+    text-decoration: none;
+    border-radius: 100%;
+    border: 2px solid #ef5757;
+    color: #ef5757;
+    position: relative;
+  }
+  body::-webkit-scrollbar {
+    overflow-y: scroll;
+  }
+
+  .switchtodark {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+  .maintext {
+    margin-top: 60px;
+  }
+}
